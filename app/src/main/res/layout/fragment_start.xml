@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/startBtn"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:background="@color/colorPrimary"
+            android:text="show note btn"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_20ssp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
