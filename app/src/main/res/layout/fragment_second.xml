@@ -6,21 +6,13 @@
 
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/showDialogBtn"
         android:layout_width="match_parent"
         android:layout_height="62dp"
-        android:text="button" />
-
-
+        android:text="@string/show_dialog" />
 
     <com.chihuasdevs.cursoandroid.custom.MyCustomView
         android:id="@+id/myCustomView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-
-    <com.chihuasdevs.cursoandroid.custom.MyCustomView
-        android:id="@+id/myCustomView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />

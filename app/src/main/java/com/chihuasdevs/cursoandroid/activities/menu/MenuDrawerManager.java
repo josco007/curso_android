@@ -1,4 +1,5 @@
 package com.chihuasdevs.cursoandroid.activities.menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -9,13 +10,13 @@ public class MenuDrawerManager {
 
 
     private interface IMenuDrawerManagerListener{
-        void menuDrawerManagerOnItemClicked();
+        void menuDrawerManagerOnItemClicked(MenuItem menuItem);
         void menuDrawerManagerOnCreateOptionsMenu();
     }
 
     public static abstract class AMenuDrawerManagerListener implements IMenuDrawerManagerListener {
         @Override
-        public void menuDrawerManagerOnItemClicked(){}
+        public void menuDrawerManagerOnItemClicked(MenuItem menuItem){}
 
         @Override
         public void menuDrawerManagerOnCreateOptionsMenu() { }
@@ -45,9 +46,9 @@ public class MenuDrawerManager {
         listeners.remove(aMenuDrawerManagerListener);
     }
 
-    protected void executeListenersForNoteItemClicked(){
+    protected void executeListenersForItemClicked(MenuItem menuItem){
         for(AMenuDrawerManagerListener aMenuDrawerManagerListener : listeners){
-            aMenuDrawerManagerListener.menuDrawerManagerOnItemClicked();
+            aMenuDrawerManagerListener.menuDrawerManagerOnItemClicked(menuItem);
         }
     }
 
@@ -69,6 +70,13 @@ public class MenuDrawerManager {
             return;
         }
         menuAC.noteItem.setVisible(show);
+    }
+
+    public void showDialogItemBtn(boolean show){
+        if (menuAC.dialogItem == null){
+            return;
+        }
+        menuAC.dialogItem.setVisible(show);
     }
 
     public boolean isBackButtonEnabled() {

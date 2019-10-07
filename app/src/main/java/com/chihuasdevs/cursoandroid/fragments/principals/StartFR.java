@@ -3,6 +3,7 @@ package com.chihuasdevs.cursoandroid.fragments.principals;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -51,13 +52,16 @@ public class StartFR  extends Fragment  implements View.OnClickListener{
 
         aMenuDrawerManagerListener = new MenuDrawerManager.AMenuDrawerManagerListener() {
             @Override
-            public void menuDrawerManagerOnItemClicked() {
-                Log.i(TAG, "noteBtn was clicked in StartFR");
+            public void menuDrawerManagerOnItemClicked(MenuItem menuItem) {
+                if (menuItem.getTitleCondensed().toString().equalsIgnoreCase(getResources().getString(R.string.note_btn))){
+                    Log.i(TAG, "noteBtn was clicked in StartFR");
+                }
             }
 
             @Override
             public void menuDrawerManagerOnCreateOptionsMenu() {
                 MenuDrawerManager.INSTANCE.showNoteItemBtn(true);
+                MenuDrawerManager.INSTANCE.showDialogItemBtn(false);
             }
         };
 

@@ -11,5 +11,13 @@
         app:showAsAction="ifRoom|withText" />
 
 
+    <item
+        android:id="@+id/dialogItem"
+        android:icon="@drawable/icons8_speech_100"
+        android:title="button1"
+        android:titleCondensed="@string/dialog"
+        android:visible="true"
+        app:showAsAction="ifRoom|withText" />
+
 
 </menu>

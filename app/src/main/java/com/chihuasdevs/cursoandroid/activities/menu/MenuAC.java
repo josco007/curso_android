@@ -43,6 +43,7 @@ public class MenuAC extends AppCompatActivity implements DrawerLayout.DrawerList
 
     //items in the toolbar
     protected MenuItem noteItem;
+    protected MenuItem dialogItem;
 
 
     //fragments
@@ -92,6 +93,7 @@ public class MenuAC extends AppCompatActivity implements DrawerLayout.DrawerList
         getMenuInflater().inflate(R.menu.menu, menu);
 
         noteItem = menu.findItem(R.id.noteItem);
+        dialogItem = menu.findItem(R.id.dialogItem);
 
         MenuDrawerManager.INSTANCE.executeListenersForOnCreateOptionsMenu();
 
@@ -102,9 +104,8 @@ public class MenuAC extends AppCompatActivity implements DrawerLayout.DrawerList
     public boolean onOptionsItemSelected(MenuItem item) {
 
         Log.i(TAG, "selected item id "+ item.getItemId());
-        if (item.getTitleCondensed().toString().equalsIgnoreCase(getResources().getString(R.string.note_btn))){
-            MenuDrawerManager.INSTANCE.executeListenersForNoteItemClicked();
-        }
+
+        MenuDrawerManager.INSTANCE.executeListenersForItemClicked(item);
 
         return super.onOptionsItemSelected(item);
     }

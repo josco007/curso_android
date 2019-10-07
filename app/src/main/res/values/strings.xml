@@ -5,6 +5,8 @@
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="note_btn">note</string>
+    <string name="show_dialog">Show dialog</string>
+    <string name="dialog">Dialog</string>
 
     <string-array name="menu_options">
         <item>Start</item>
