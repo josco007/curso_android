@@ -33,7 +33,8 @@ public class StartFR  extends Fragment  implements View.OnClickListener{
     private  MenuDrawerManager.AMenuDrawerManagerListener aMenuDrawerManagerListener;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater,
+                             ViewGroup container,
                              Bundle savedInstanceState) {
 
 

@@ -3,4 +3,17 @@
     <string name="note_btn">Notas</string>
     <string name="show_dialog">Mostrar dialogo</string>
     <string name="dialog">Dialogo</string>
+    <string name="name_hint">Nombre</string>
+    <string name="bar_code_hitn">Codigo de barras</string>
+    <string name="price_hint">Precio</string>
+    <string name="save">Guardar</string>
+    <string name="required">Requerido</string>
+
+
+    <string-array name="menu_options">
+        <item>Empezar</item>
+        <item>Productos</item>
+    </string-array>
+
+
 </resources>

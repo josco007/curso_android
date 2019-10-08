@@ -7,9 +7,15 @@
     <string name="note_btn">note</string>
     <string name="show_dialog">Show dialog</string>
     <string name="dialog">Dialog</string>
+    <string name="name_hint">Name</string>
+    <string name="bar_code_hitn">bar code</string>
+    <string name="price_hint">Price</string>
+    <string name="save">Save</string>
+    <string name="required">Required</string>
 
     <string-array name="menu_options">
         <item>Start</item>
+        <item>Products</item>
     </string-array>
 
 </resources>

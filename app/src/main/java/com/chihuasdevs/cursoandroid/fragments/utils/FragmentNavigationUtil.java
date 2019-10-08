@@ -2,6 +2,7 @@ package com.chihuasdevs.cursoandroid.fragments.utils;
 
 import com.chihuasdevs.cursoandroid.R;
 import com.chihuasdevs.cursoandroid.activities.menu.MenuDrawerManager;
+import com.chihuasdevs.cursoandroid.fragments.principals.ProductFormFR;
 import com.chihuasdevs.cursoandroid.fragments.principals.SecondFR;
 
 import androidx.fragment.app.Fragment;
@@ -35,5 +36,16 @@ public class FragmentNavigationUtil {
         //scannedTrapDevicesFR.setArguments(bundle);
 
         FragmentNavigationUtil.addFragment(fragmentActivity,secondFR,"secondFR");
+    }
+
+    public static void openProductFormFR(FragmentActivity fragmentActivity){
+
+        ProductFormFR productFormFR = new ProductFormFR();
+
+        //Bundle bundle  = new Bundle();
+        //bundle.putSerializable("param", param);
+        //scannedTrapDevicesFR.setArguments(bundle);
+
+        FragmentNavigationUtil.addFragment(fragmentActivity,productFormFR,"productFormFR");
     }
 }

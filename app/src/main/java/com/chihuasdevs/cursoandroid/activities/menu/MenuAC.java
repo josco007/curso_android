@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 
 import com.chihuasdevs.cursoandroid.R;
+import com.chihuasdevs.cursoandroid.fragments.principals.ProductsListFR;
 import com.chihuasdevs.cursoandroid.fragments.principals.StartFR;
 
 
@@ -48,6 +49,7 @@ public class MenuAC extends AppCompatActivity implements DrawerLayout.DrawerList
 
     //fragments
     private StartFR startFR;
+    private ProductsListFR productsListFR;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -59,6 +61,7 @@ public class MenuAC extends AppCompatActivity implements DrawerLayout.DrawerList
         setSupportActionBar(toolbar);
 
         startFR = new StartFR();
+        productsListFR = new ProductsListFR();
 
         initSlideMenu(savedInstanceState);
 
@@ -230,6 +233,10 @@ public class MenuAC extends AppCompatActivity implements DrawerLayout.DrawerList
                 openStartFR();
                 break;
             }
+            case 1:{
+                openProductFR();
+                break;
+            }
             default:{ //signOut
                 //ActivitiesManager.openLoginAC(this);
                 //SessionManager.INSTANCE.setSession(null);
@@ -250,6 +257,10 @@ public class MenuAC extends AppCompatActivity implements DrawerLayout.DrawerList
 
     private void openStartFR(){
         getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, startFR).commit();
+    }
+
+    private void openProductFR(){
+        getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, productsListFR).commit();
     }
 
 }
